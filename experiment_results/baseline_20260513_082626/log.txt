@@ -1,0 +1,10 @@
+[2026-05-13 08:26:26] Experiment started
+[2026-05-13 08:26:26] Random seed: 42
+[2026-05-13 08:26:26] Configuration saved to experiment_results/baseline_20260513_082626/config.json
+[2026-05-13 08:26:26] Using device: cpu
+[2026-05-13 08:26:26] Testing on 2 instances from ./data_test/1005/
+[2026-05-13 08:26:27] Loading model: save_10_5.pt
+[2026-05-13 08:26:27] Model loaded successfully
+[2026-05-13 08:26:27] Starting tests...
+[2026-05-13 08:26:27] Processing instance 1/2: 3128_10j_5m.fjs
+[2026-05-13 08:26:27] Created environment 0

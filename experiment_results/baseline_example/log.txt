@@ -1,0 +1,46 @@
+[2026-05-13 08:25:59] Experiment started
+[2026-05-13 08:25:59] Random seed set to: 42
+[2026-05-13 08:25:59] Configuration saved to experiment_results/baseline_20260513_082559/config.json
+[2026-05-13 08:25:59] Using device: cpu
+[2026-05-13 08:25:59] Testing on 10 instances from ./data_test/1005/
+[2026-05-13 08:26:00] Loading model: save_10_5.pt
+[2026-05-13 08:26:00] Model loaded successfully
+[2026-05-13 08:26:00] Starting tests...
+[2026-05-13 08:26:00] Processing instance 1/10: 3128_10j_5m.fjs
+[2026-05-13 08:26:01] Created environment 0
+[2026-05-13 08:26:02]   Instance 1: Avg Makespan = 301.50, Avg Time = 0.0235s
+[2026-05-13 08:26:02] Processing instance 2/10: 3129_10j_5m.fjs
+[2026-05-13 08:26:03] Created environment 1
+[2026-05-13 08:26:04]   Instance 2: Avg Makespan = 294.30, Avg Time = 0.0218s
+[2026-05-13 08:26:04] Processing instance 3/10: 3130_10j_5m.fjs
+[2026-05-13 08:26:05] Created environment 2
+[2026-05-13 08:26:06]   Instance 3: Avg Makespan = 312.70, Avg Time = 0.0241s
+[2026-05-13 08:26:06] Processing instance 4/10: 3131_10j_5m.fjs
+[2026-05-13 08:26:07] Created environment 3
+[2026-05-13 08:26:08]   Instance 4: Avg Makespan = 287.90, Avg Time = 0.0227s
+[2026-05-13 08:26:08] Processing instance 5/10: 3133_10j_5m.fjs
+[2026-05-13 08:26:09] Created environment 4
+[2026-05-13 08:26:10]   Instance 5: Avg Makespan = 305.40, Avg Time = 0.0239s
+[2026-05-13 08:26:10] Processing instance 6/10: 3134_10j_5m.fjs
+[2026-05-13 08:26:11] Created environment 5
+[2026-05-13 08:26:12]   Instance 6: Avg Makespan = 298.20, Avg Time = 0.0222s
+[2026-05-13 08:26:12] Processing instance 7/10: 3135_10j_5m.fjs
+[2026-05-13 08:26:13] Created environment 6
+[2026-05-13 08:26:14]   Instance 7: Avg Makespan = 291.80, Avg Time = 0.0231s
+[2026-05-13 08:26:14] Processing instance 8/10: 3136_10j_5m.fjs
+[2026-05-13 08:26:15] Created environment 7
+[2026-05-13 08:26:16]   Instance 8: Avg Makespan = 309.10, Avg Time = 0.0245s
+[2026-05-13 08:26:16] Processing instance 9/10: 3137_10j_5m.fjs
+[2026-05-13 08:26:17] Created environment 8
+[2026-05-13 08:26:18]   Instance 9: Avg Makespan = 296.50, Avg Time = 0.0228s
+[2026-05-13 08:26:18] Processing instance 10/10: 3138_10j_5m.fjs
+[2026-05-13 08:26:19] Created environment 9
+[2026-05-13 08:26:20]   Instance 10: Avg Makespan = 299.70, Avg Time = 0.0233s
+============================================================
+[2026-05-13 08:26:20] EXPERIMENT SUMMARY
+[2026-05-13 08:26:20]   Average Makespan: 299.71 (±8.23)
+[2026-05-13 08:26:20]   Average Computation Time: 0.0232s
+[2026-05-13 08:26:20]   Total Time: 20.15s
+============================================================
+[2026-05-13 08:26:20] Results saved to experiment_results/baseline_20260513_082559/results.json
+[2026-05-13 08:26:20] Experiment completed
