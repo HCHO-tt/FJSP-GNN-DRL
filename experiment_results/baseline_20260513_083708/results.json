@@ -1,0 +1,10 @@
+{
+    "experiment_name": "baseline",
+    "timestamp": "20260513_083708",
+    "seed": 42,
+    "note": "\u8fd9\u662f\u5b9e\u9a8c\u7ba1\u7406\u7cfb\u7edf\u793a\u4f8b\uff0c\u8fd0\u884c\u5b8c\u6574\u5b9e\u9a8c\u9700\u8981\u517c\u5bb9\u73af\u5883",
+    "summary": {
+        "average_makespan": 299.71,
+        "std_makespan": 8.23
+    }
+}

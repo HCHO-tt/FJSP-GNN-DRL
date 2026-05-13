@@ -1,0 +1,92 @@
+{
+    "experiment_name": "baseline",
+    "timestamp": "20260513_084447",
+    "seed": 42,
+    "device": "cpu",
+    "test_instances": 10,
+    "avg_makespan": 114.5,
+    "std_makespan": 4.201190307520001,
+    "avg_compute_time": 0.3439067482948303,
+    "total_time": 34.869882106781006,
+    "details": {
+        "file_names": [
+            "3128_10j_5m.fjs",
+            "3129_10j_5m.fjs",
+            "3130_10j_5m.fjs",
+            "3131_10j_5m.fjs",
+            "3133_10j_5m.fjs",
+            "3134_10j_5m.fjs",
+            "3135_10j_5m.fjs",
+            "3136_10j_5m.fjs",
+            "3137_10j_5m.fjs",
+            "3138_10j_5m.fjs"
+        ],
+        "makespans": [
+            122.0,
+            119.0,
+            107.0,
+            117.0,
+            114.0,
+            116.0,
+            112.0,
+            116.0,
+            112.0,
+            110.0
+        ],
+        "times": [
+            0.3436089754104614,
+            0.3413469552993774,
+            0.3427329778671265,
+            0.3460575819015503,
+            0.3445143222808838,
+            0.34146842956542967,
+            0.3457926034927368,
+            0.3428602933883667,
+            0.34610896110534667,
+            0.34457638263702395
+        ]
+    },
+    "config": {
+        "env_paras": {
+            "num_jobs": 10,
+            "num_mas": 5,
+            "batch_size": 20,
+            "ope_feat_dim": 6,
+            "ma_feat_dim": 3,
+            "show_mode": "print",
+            "valid_batch_size": 100,
+            "device": "cpu"
+        },
+        "model_paras": {
+            "in_size_ma": 3,
+            "out_size_ma": 8,
+            "in_size_ope": 6,
+            "out_size_ope": 8,
+            "hidden_size_ope": 128,
+            "num_heads": [
+                1,
+                1
+            ],
+            "dropout": 0.0,
+            "n_latent_actor": 64,
+            "n_latent_critic": 64,
+            "n_hidden_actor": 3,
+            "n_hidden_critic": 3,
+            "action_dim": 1,
+            "device": "cpu",
+            "actor_in_dim": 32,
+            "critic_in_dim": 16
+        },
+        "test_paras": {
+            "num_ins": 10,
+            "rules": [
+                "DRL"
+            ],
+            "sample": false,
+            "num_sample": 100,
+            "num_average": 10,
+            "public_ins": true,
+            "data_path": "1005"
+        }
+    }
+}

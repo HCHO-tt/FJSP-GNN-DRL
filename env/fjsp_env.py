@@ -67,7 +67,8 @@ class FJSPEnv(gym.Env):
         :param env_paras: A dictionary of parameters for the environment
         :param data_source: Indicates that the instances came from a generator or files
         '''
-
+        super(FJSPEnv, self).__init__()
+        
         # load paras
         # static
         self.show_mode = env_paras["show_mode"]  # Result display mode (deprecated in the final experiment)
@@ -340,7 +341,7 @@ class FJSPEnv(gym.Env):
 
         # Update partial schedule (state), variables and feature vectors
         aa = self.machines_batch.transpose(1, 2)
-        aa[d, 0] = 1
+        aa[:, 0, :][d] = 1
         self.machines_batch = aa.transpose(1, 2)
 
         utiliz = self.machines_batch[:, :, 2]
