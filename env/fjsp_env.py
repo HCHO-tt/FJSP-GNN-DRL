@@ -140,10 +140,14 @@ class FJSPEnv(gym.Env):
                 Number of unscheduled operations in the job
                 Job completion time
                 Start time
+                Urgency (remaining time / total time) - heuristic feature
+                Critical path indicator - heuristic feature
             ma:
                 Number of neighboring operations
                 Available time
                 Utilization
+                Machine load - heuristic feature
+                Bottleneck indicator - heuristic feature
         '''
         # Generate raw feature vectors
         feat_opes_batch = torch.zeros(size=(self.batch_size, self.paras["ope_feat_dim"], self.num_opes))
@@ -158,6 +162,28 @@ class FJSPEnv(gym.Env):
                           feat_opes_batch[:, 2, :]).gather(1, self.end_ope_biases_batch)
         feat_opes_batch[:, 4, :] = convert_feat_job_2_ope(end_time_batch, self.opes_appertain_batch)
         feat_mas_batch[:, 0, :] = torch.count_nonzero(self.ope_ma_adj_batch, dim=1)
+        
+        # ========== 启发式特征 ==========
+        
+        # 操作特征6: 作业紧急程度 (剩余时间 / 总时间)
+        total_time = feat_opes_batch[:, 4, :] + 1e-9  # 避免除零
+        remaining_time = total_time - feat_opes_batch[:, 5, :]  # 完成时间 - 当前开始时间
+        feat_opes_batch[:, 6, :] = remaining_time / total_time  # 归一化的紧急程度
+        
+        # 操作特征7: 关键路径标记 (是否在最长路径上)
+        max_end_time = torch.max(end_time_batch, dim=1, keepdim=True)[0]
+        is_critical = (end_time_batch == max_end_time).float()
+        feat_opes_batch[:, 7, :] = convert_feat_job_2_ope(is_critical, self.opes_appertain_batch)
+        
+        # 机器特征3: 机器负载 (已分配操作数 / 总操作数)
+        total_opes = self.num_opes
+        ma_load = feat_mas_batch[:, 0, :] / total_opes
+        feat_mas_batch[:, 3, :] = ma_load
+        
+        # 机器特征4: 瓶颈机器标记 (负载是否超过平均负载的1.5倍)
+        avg_load = torch.mean(ma_load, dim=1, keepdim=True)
+        is_bottleneck = (ma_load > 1.5 * avg_load).float()
+        feat_mas_batch[:, 4, :] = is_bottleneck
         self.feat_opes_batch = feat_opes_batch
         self.feat_mas_batch = feat_mas_batch
 

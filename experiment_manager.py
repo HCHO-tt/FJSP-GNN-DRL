@@ -33,11 +33,13 @@ class ExperimentManager:
         self.log_file.write(log_line + "\n")
     
     def save_config(self, config_dict, extra_info=None):
-        """保存配置到文件"""
+        """保存配置文件"""
+        config_copy = json.loads(json.dumps(config_dict, default=str))
+        
         full_config = {
             "experiment_name": self.experiment_name,
             "timestamp": self.timestamp,
-            "config": config_dict
+            "config": config_copy
         }
         
         if extra_info:
