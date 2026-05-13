@@ -1,7 +1,8 @@
 {
-    "experiment_name": "baseline",
-    "timestamp": "20260513_083848",
+    "experiment_name": "baseline_1510",
+    "timestamp": "20260513_085504",
     "seed": 42,
+    "data_scale": "1510",
     "env_paras": {
         "num_jobs": 10,
         "num_mas": 5,
@@ -57,6 +58,6 @@
         "num_sample": 100,
         "num_average": 10,
         "public_ins": true,
-        "data_path": "1005"
+        "data_path": "1510"
     }
 }

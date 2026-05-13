@@ -1,0 +1,77 @@
+{
+    "experiment_name": "baseline_4010",
+    "timestamp": "20260513_090419",
+    "seed": 42,
+    "device": "cpu",
+    "data_scale": "4010",
+    "test_instances": 5,
+    "num_average": 5,
+    "avg_makespan": 419.4,
+    "std_makespan": 4.223742416388575,
+    "avg_compute_time": 8.181579961776734,
+    "total_time": 205.3708267211914,
+    "details": {
+        "file_names": [
+            "5056_40j_10m.fjs",
+            "5058_40j_10m.fjs",
+            "5059_40j_10m.fjs",
+            "5101_40j_10m.fjs",
+            "5102_40j_10m.fjs"
+        ],
+        "makespans": [
+            424.0,
+            419.0,
+            413.0,
+            417.0,
+            424.0
+        ],
+        "times": [
+            8.17398543357849,
+            8.172878170013428,
+            8.190483331680298,
+            8.196534681320191,
+            8.17401819229126
+        ]
+    },
+    "config": {
+        "env_paras": {
+            "num_jobs": 10,
+            "num_mas": 5,
+            "batch_size": 20,
+            "ope_feat_dim": 6,
+            "ma_feat_dim": 3,
+            "show_mode": "print",
+            "valid_batch_size": 100,
+            "device": "cpu"
+        },
+        "model_paras": {
+            "in_size_ma": 3,
+            "out_size_ma": 8,
+            "in_size_ope": 6,
+            "out_size_ope": 8,
+            "hidden_size_ope": 128,
+            "num_heads": [
+                1,
+                1
+            ],
+            "dropout": 0.0,
+            "n_latent_actor": 64,
+            "n_latent_critic": 64,
+            "n_hidden_actor": 3,
+            "n_hidden_critic": 3,
+            "action_dim": 1,
+            "device": "cpu"
+        },
+        "test_paras": {
+            "num_ins": 5,
+            "rules": [
+                "DRL"
+            ],
+            "sample": false,
+            "num_sample": 100,
+            "num_average": 5,
+            "public_ins": true,
+            "data_path": "4010"
+        }
+    }
+}
